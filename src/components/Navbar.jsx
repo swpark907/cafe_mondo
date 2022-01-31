@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+  const [navActive, setNavActive] = useState(false);
+
   return (
     <div className='flex justify-between px-8 py-4'>
       <div className='flex items-center'>
