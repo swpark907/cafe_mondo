@@ -1,6 +1,5 @@
 import './App.css';
 import {Navbar, Header, About, Menu, Megazine, Gallery, Contact, Footer} from './components';
-// import Navbar from './components'
 
 
 function App() {
