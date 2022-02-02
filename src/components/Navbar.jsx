@@ -7,9 +7,9 @@ const Navbar = () => {
   return (
     <div className="flex justify-between px-8 py-4">
       <div className="flex items-center">
-        {/* <img className="" src="" alt="logo" /> */}
-        CafeMondo
+        <Link to="/">CafeMondo</Link>
       </div>
+
       <ul className="flex text-lg">
         <li className="px-4 py-2">
           <Link to="/about">카페몬도</Link>
