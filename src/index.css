@@ -12,8 +12,9 @@
   --color-light-grey: #D9C9BA;
   --color-grey: #a19488;
   --color-red: #A60403;
-  --color-orange: #ffe2d4;
+  --color-orange: rgb(255, 226, 212);
   --color-pink: #F28485;
+  --color-dark-pink: #e96668;
   --color-dark-brown: #400001;
   --color-brown: #8C4303;
   --color-beige: #D9965B;
