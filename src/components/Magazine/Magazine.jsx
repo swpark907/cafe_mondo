@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Megazine = () => {
+const Magazine = () => {
   return (
     <div>
       Magazine
@@ -8,4 +8,4 @@ const Megazine = () => {
   );
 };
 
-export default Megazine;
+export default Magazine;
