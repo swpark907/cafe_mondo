@@ -1,3 +1,22 @@
-body{
-  font-family: 'NotoSans';
+.app__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+.section_padding{
+  padding: 4rem 10rem;
+}
+
+@media screen and (max-width: 1150px){
+
+}
+@media screen and (max-width: 850px){
+
+}
+@media screen and (max-width: 768px){
+
+}
+@media screen and (max-width: 400px){
+
 }
