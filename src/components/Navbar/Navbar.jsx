@@ -11,49 +11,49 @@ const Navbar = () => {
   }
 
   return (
-    <div className={navActive === false ? "app_navbar" : "app_navbar active"}>
-      <div className="app_navbar-container">
-        <div className="app_navbar-logo">
-          <Link to="/">Cafe Mondo</Link>
+    <div className={navActive === false ? "app__navbar" : "app__navbar active"}>
+      <div className="app__navbar-container">
+        <div className="app__navbar-logo">
+          <Link to="/">CAFFEMONDO</Link>
         </div>
-        <div className="app_navbar-menu">
+        <div className="app__navbar-menu">
           <ion-icon name="menu-outline"></ion-icon>
         </div>
         <ul
-          className="app_navbar-nav active"
+          className="app__navbar-nav"
           onMouseEnter={navActiveToggle}
           onMouseLeave={navActiveToggle}
         >
-          <li className="app_navbar-link">
-            <Link to="/about">카페몬도</Link>
-            <ul className="app_navbar-link_sub">
+          <li className="app__navbar-link">
+            <Link to="/about"><span className="app__navbar-link__main">카페몬도</span></Link>
+            <ul className="app__navbar-link__sub">
               <li>브랜드 이야기</li>
               <li>메뉴안내</li>
             </ul>
           </li>
-          <li className="app_navbar-link">
-            <Link to="/">갤러리</Link>
-            <ul className="app_navbar-link_sub">
+          <li className="app__navbar-link">
+            <Link to="/"><span className="app__navbar-link__main">갤러리</span></Link>
+            <ul className="app__navbar-link__sub">
               <li>몬도 소식</li>
               <li>매거진</li>
               <li>카페 바라보기</li>
             </ul>
           </li>
-          <li className="app_navbar-link">
-            <Link to="/">???</Link>
-            <ul className="app_navbar-link_sub">
+          <li className="app__navbar-link">
+            <Link to="/"><span className="app__navbar-link__main">???</span></Link>
+            <ul className="app__navbar-link__sub">
               <li>공지사항</li>
               <li>질문과 답변</li>
             </ul>
           </li>
-          <li className="app_navbar-link">
-            <Link to="/">만나러가기</Link>
-            <ul className="app_navbar-link_sub">
+          <li className="app__navbar-link">
+            <Link to="/"><span className="app__navbar-link__main">만나러가기</span></Link>
+            <ul className="app__navbar-link__sub">
               <li>오시는 길</li>
             </ul>
           </li>
         </ul>
-        <div className="app_navbar-login">
+        <div className="app__navbar-login">
           <Link to="/login">로그인</Link>
         </div>
       </div>

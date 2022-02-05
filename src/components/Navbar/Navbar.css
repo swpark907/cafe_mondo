@@ -1,88 +1,118 @@
-.app_navbar{
+.app__navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding: 2rem 1rem 1rem;
-  background-color: white;
+  background-color: var(--color-white);
 }
 
-.app_navbar-container{
+.app__navbar-container{
   width: 1190px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 
-.app_navbar-logo{
+.app__navbar-logo{
+  display: flex;
+  align-items: center;
 }
 
-.app_navbar-nav{
+.app__navbar-nav{
   display: flex;
   justify-content: space-around;
+  padding: 0.5rem;
 }
 
-.app_navbar::after{
+.app__navbar::after{
   content: '';
   z-index: -1;
-  top: 3rem;
+  top: 4.5rem;
   left: 0;
   position: absolute;
   width: 100%;
   height: 0;
 }
 
-.app_navbar.active::after{
+.app__navbar.active::after{
   height: 10rem;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(255,255,255, 0.5);
 }
 
-.app_navbar-menu{
+.app__navbar-menu{
   display: none;
   font-size: 1.5rem;
   z-index: 10;
 }
 
-.app_navbar-link{
+.app__navbar-link{
   position: relative;
-  padding: 0 3rem;
+  
+  width: 8rem;  
   text-align: center;
+  transition: all 200ms;
 }
 
-.app_navbar-link_sub{
+.app__navbar-link__main{
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  transition: all 250ms;
+  cursor: pointer;
+  z-index: 10;
+  font-weight: 700;
+}
+
+.app__navbar-link__main:hover{
+  background-color: var(--color-light-grey);
+  
+}
+
+.app__navbar-link__sub{
   visibility: hidden;
   position: absolute;
   text-align: center;
+  height: 10rem;
   width: 100%;
   left: 0;
-  top: 1.2rem;
+  top: 2rem;
   padding: 2rem 0 0;
 }
 
-.app_navbar-link_sub li{
+.app__navbar-link__sub li{
   padding: 0.3rem;
+  cursor: pointer;
+}
+.app__navbar-link__sub li:hover{
+  text-decoration: underline;
 }
 
-.app_navbar.active .app_navbar-link_sub{
+.app__navbar.active .app__navbar-link__sub{
   visibility: visible;
 }
 
-.app_navbar-login{
+.app__navbar-login{
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
-  .app_navbar-container{
+  .app__navbar-container{
     width: 100%;
   }
 
-  .app_navbar-nav{
+  .app__navbar-nav{
     display: none;
   }
 
-  .app_navbar-login{
+  .app__navbar-login{
     display: none;
   }
 
-  .app_navbar-menu{
+  .app__navbar-menu{
     display: block;
   }
 }
