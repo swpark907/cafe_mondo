@@ -2,8 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@400;500;700&display=swap");
 
+
+:root{
+  /* Color */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-light-grey: #D9C9BA;
+  --color-grey: #a19488;
+  --color-red: #A60403;
+  --color-orange: #ffe2d4;
+  --color-pink: #F28485;
+  --color-dark-brown: #400001;
+  --color-brown: #8C4303;
+  --color-beige: #D9965B;
+  --color-jade: #496B72;
+
+  /* Font family*/
+  --font-noto: 'Noto Sans KR', sans-serif;
+  --font-Roboto: 'Roboto', sans-serif;
 }
 
 *{
@@ -15,5 +33,6 @@
 
 body{
   margin: 0;
+  font-family: var(--font-noto);
 
 }
