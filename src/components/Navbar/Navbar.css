@@ -1,4 +1,5 @@
 .app__navbar{
+  z-index: 10;
   position: fixed;
   top: 0;
   width: 100%;
@@ -29,8 +30,8 @@
 
 .app__navbar::after{
   content: '';
-  z-index: -1;
-  top: 4.5rem;
+  z-index: -2;
+  top: 5.5rem;
   left: 0;
   position: absolute;
   width: 100%;
@@ -38,8 +39,8 @@
 }
 
 .app__navbar.active::after{
-  height: 10rem;
-  background-color: rgba(255,255,255, 0.5);
+  height: 9rem;
+  background-color: var(--color-orange);
 }
 
 .app__navbar-menu{
@@ -98,8 +99,12 @@
   display: flex;
   align-items: center;
 }
+.app__navbar-login a{
+  font-size: 14px;
+  margin-left: 1rem;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .app__navbar-container{
     width: 100%;
   }
