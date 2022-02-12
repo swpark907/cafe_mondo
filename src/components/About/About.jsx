@@ -23,10 +23,9 @@ const About = () => {
     if(window.innerHeight > contentTop + 500){
       setContentOn(true);
     } else{ setContentOn(false)}
-    if(contentBottom < 0) {
+    if(contentBottom < 500) {
       setContentOn(false);
     }
-    
   }
 
 
