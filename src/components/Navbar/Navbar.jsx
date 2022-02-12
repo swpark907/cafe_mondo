@@ -1,17 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
+  const [navShow, setNavShow] = useState(true);
 
   function navActiveToggle() {
     setNavActive(!navActive);
     console.log(navActive);
   }
 
+  useEffect(() => {
+    window.addEventListener('scroll', navOn)
+    return () => {
+      window.removeEventListener('scroll', navOn)
+    }
+  },[navShow])
+
+  function navOn () {
+    if(window.scrollY > 300 && navShow){
+      setNavShow(false)
+      return ;
+    }
+    if(window.scrollY <= 300 && !navShow){
+      setNavShow(true);
+      return;
+    }
+  }
+
   return (
-    <div className={navActive === false ? "app__navbar" : "app__navbar active"}>
+    <div className={"app__navbar" + (navActive === false ? "" : " active") + (navShow ? "" : " on")}>
       <div className="app__navbar-container">
         <div className="app__navbar-logo">
           <Link to="/">CAFFEMONDO</Link>
