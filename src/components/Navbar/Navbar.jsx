@@ -47,7 +47,14 @@ const Navbar = () => {
             <Link to="/about"><span className="app__navbar-link__main">카페몬도</span></Link>
             <ul className="app__navbar-link__sub">
               <li>브랜드 이야기</li>
-              <li>메뉴안내</li>
+              <li>공지사항</li>
+            </ul>
+          </li>
+          <li className="app__navbar-link">
+            <Link to="/"><span className="app__navbar-link__main">MENU</span></Link>
+            <ul className="app__navbar-link__sub">
+              <li>온라인 매장</li>
+              <li>오프라인 메뉴</li>
             </ul>
           </li>
           <li className="app__navbar-link">
@@ -57,14 +64,7 @@ const Navbar = () => {
               <li>매거진</li>
               <li>카페 바라보기</li>
             </ul>
-          </li>
-          <li className="app__navbar-link">
-            <Link to="/"><span className="app__navbar-link__main">???</span></Link>
-            <ul className="app__navbar-link__sub">
-              <li>공지사항</li>
-              <li>질문과 답변</li>
-            </ul>
-          </li>
+          </li>          
           <li className="app__navbar-link">
             <Link to="/"><span className="app__navbar-link__main">만나러가기</span></Link>
             <ul className="app__navbar-link__sub">
