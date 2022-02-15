@@ -1,19 +1,17 @@
 import './App.css';
-import {Navbar, Header, About, Menu, Magazine, Gallery, Contact, Footer} from './components';
+import { Route, Routes } from 'react-router-dom';
+import { Home, Navbar, Auth} from './components'
+
 
 
 function App() {
   return (
-    
     <div>
       <Navbar />
-      <Header />
-      <About />
-      <Menu />
-      <Magazine />
-      <Gallery />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path="/" exact element={<Home />}/>
+        <Route path="/auth" exact element={<Auth />} />
+      </Routes>
     </div>
   );
 }

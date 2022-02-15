@@ -73,8 +73,8 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="app__navbar-login">
-          <Link to="/login">로그인</Link>
-          <Link to="/join">회원가입</Link>
+          <Link to="/auth">로그인</Link>
+          <Link to="/auth">회원가입</Link>
         </div>
       </div>
     </div>

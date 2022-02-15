@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import {images} from '../../constants'
+import {images} from '../../../constants'
 import { Link } from 'react-router-dom';
 
 const Header = () => {
