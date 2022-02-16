@@ -27,14 +27,14 @@ const Menu = () => {
           <img src={images.menuCoffee} alt="menu-coffee" />
           <div className="card__label">
             <h3 className="card__label__name">COFFEE</h3>
-            <p className="card__label__info"></p>
+            <p className="card__label__info">따뜻한 커피로 하루를 시작해보세요.</p>
           </div>
         </li>
         <li className="app__menu__card" onMouseOver={cardActive}>
           <img src={images.menuFrappucino} alt="menu-frappucino" />
           <div className="card__label">
             <h3 className="card__label__name">FRAPPUCINO</h3>
-            <p className="card__label__info"></p>
+            <p className="card__label__info">시원함으로 활기찬 하루를 보내세요</p>
           </div>
         </li>
         <li className="app__menu__card" onMouseOver={cardActive}>
@@ -48,43 +48,24 @@ const Menu = () => {
           <img src={images.menuTea} alt="menu-tea" />
           <div className="card__label">
             <h3 className="card__label__name">TEA</h3>
-            <p className="card__label__info"></p>
+            <p className="card__label__info">차분한 분위기와 함께 한잔의 차를</p>
           </div>
         </li>
         <li className="app__menu__card" onMouseOver={cardActive}>
           <img src={images.menuSmoothie} alt="menu-smoothie" />
           <div className="card__label">
             <h3 className="card__label__name">SMOOTHIE</h3>
-            <p className="card__label__info"></p>
+            <p className="card__label__info">달달한 요거트와 상큼한 과일의 만남!!</p>
           </div>
         </li>
         <li className="app__menu__card" onMouseOver={cardActive}>
           <img src={images.menuIcecream} alt="menu-icecream" />
           <div className="card__label">
             <h3 className="card__label__name">ICE CREAM</h3>
-            <p className="card__label__info"></p>
+            <p className="card__label__info">달콤함과 시원함으로 스트레스를 확!</p>
           </div>
         </li>
       </ul>
-
-
-
-
-
-
-
-
-
-      {/* <ul className="app__menu__carousel">
-        <li className="menu__carousel__content flex__center">
-          <Link to="#">
-            <img src="" alt="" />
-            <p className="content__name">브라질 어쩌구 커피</p>
-            <p className="content__desc">달콤함, 과일향, 진함</p>
-            <p className="content__const">10000원</p>
-          </Link>
-        </li>
-      </ul> */}
     </div>
   );
 };
