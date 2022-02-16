@@ -1,33 +1,84 @@
-.app__menu{
+.app__menu {
+}
+
+.app__menu__cards {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  align-items: stretch;
+}
+
+.app__menu__card {
+  flex: 1;
+  width: 100%;
+  min-width: 50px;
+  overflow: hidden;
+  margin: 0 5px;
+  border-radius: 15px;
+  position: relative;
+  transition: all 500ms;
+}
+
+.app__menu__card.active {
+  flex-grow: 5;
+  margin: 0;
+  max-width: 1000px;
+}
+
+.app__menu__card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(120%);
+}
+
+.card__label {
+  font-family: 'Malgun Gothic';
+  position: absolute;
+  width: 100%;
+  min-width: 400px;
+  bottom: 0;
+  color: var(--color-white);
+  opacity: 0;
+  padding: 2rem;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+  transition: opacity 500ms;
   
 }
 
-.app__menu__carousel{
+.app__menu__card.active .card__label {
+  opacity: 1;
+}
+
+/* --------------------------------------------*/
+
+.app__menu__carousel {
   display: flex;
   background-color: aqua;
   width: 1000px;
   /* padding: 1rem; */
 }
 
-.menu__carousel__content{
+.menu__carousel__content {
   flex-direction: column;
   width: 25%;
   padding: 1rem;
 }
 
-.menu__carousel__content a{
+.menu__carousel__content a {
   width: 100%;
 }
 
-.menu__carousel__content img{
+.menu__carousel__content img {
   width: 100%;
   padding-bottom: 100%;
-  
+
   background-color: blue;
   border-radius: 50%;
 }
 
-.menu__carousel__content p{
+.menu__carousel__content p {
   margin-top: 0.5rem;
   width: 100%;
   text-align: center;
