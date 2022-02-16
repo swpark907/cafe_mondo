@@ -33,7 +33,7 @@ const About = () => {
   return (
     <div className="app__about app__wrapper flex__center">
         <div className={"app__about__content content-left" + (!contentOn ? "" : " on")}>
-          <h1 className="headtext">MEMORY</h1>
+          <h2 className="headtext">MEMORY</h2>
           <p className="p__noto">추억을 나누는 곳,여유를 즐기는 곳<br />따뜻한 정성이 느껴지는 곳</p>
           <p className="p__noto">여러분의 소중한 기억이<br /> 되어드리겠습니다.</p>
         </div>
@@ -44,7 +44,7 @@ const About = () => {
         <div className={"app__about__content content-right" + (!contentOn ? "" : " on")}>
           <div className="p__noto text__end">Lorem ipsum dolor sit.</div>
           <div className="p__noto text__end">Lorem ipsum dolor sit amet.</div>
-          <div className="headtext text__end">MONDO</div>
+          <h2 className="headtext text__end">MONDO</h2>
         </div>
     </div>
   );

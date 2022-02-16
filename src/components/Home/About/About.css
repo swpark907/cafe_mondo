@@ -46,5 +46,26 @@
 }
 
 .app__about__latte img{
-  width: 100%;
+  /* width: 100%; */
+}
+
+@media screen and (max-width: 1150px){
+
+}
+@media screen and (max-width: 850px){
+
+}
+@media screen and (max-width: 768px){
+  .app__about__latte{
+    width: 100%;
+  }
+  .app__about{
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 500px){
+  .app__about{
+    flex-direction: column;
+
+  }
 }
