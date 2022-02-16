@@ -66,6 +66,12 @@
 @media screen and (max-width: 500px){
   .app__about{
     flex-direction: column;
+  }
+  .app__about__content.content-left::before{
+    top: -13px;
+  }
 
+  .app__about__content.content-right::after{
+    bottom: 0;
   }
 }
