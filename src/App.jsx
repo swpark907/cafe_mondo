@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { Home, Navbar, Auth} from './components'
+import { Home, Navbar, Auth, Footer} from './components'
 
 
 
@@ -12,6 +12,7 @@ function App() {
         <Route path="/" exact element={<Home />}/>
         <Route path="/auth" exact element={<Auth />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
