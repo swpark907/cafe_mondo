@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="app__navbar-logo">
           <Link to="/">CAFFEMONDO</Link>
         </div>
-        <div className="app__navbar-menu">
+        <div className="app__navbar-toggle">
           <ion-icon name="menu-outline"></ion-icon>
         </div>
         <ul
@@ -53,8 +53,12 @@ const Navbar = () => {
           <li className="app__navbar-link">
             <Link to="/"><span className="app__navbar-link__main">MENU</span></Link>
             <ul className="app__navbar-link__sub">
-              <li>온라인 매장</li>
-              <li>오프라인 메뉴</li>
+              <li>커피</li>
+              <li>프라푸치노</li>
+              <li>과일쥬스</li>
+              <li>차</li>
+              <li>스무디</li>
+              <li>아이스크림</li>
             </ul>
           </li>
           <li className="app__navbar-link">

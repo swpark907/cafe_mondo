@@ -52,7 +52,7 @@
 }
 
 .app__navbar.active::after{
-  height: 9rem;
+  height: 13.5rem;
   background-color: var(--color-orange);
 }
 
@@ -60,10 +60,10 @@
   background-color: rgba(255,226,212, 0.8);
 }
 
-.app__navbar-menu{
+.app__navbar-toggle{
   display: none;
-  font-size: 1.5rem;
-  z-index: 10;
+  font-size: 1.7rem;
+  cursor: pointer;
 }
 
 .app__navbar-link{
@@ -92,15 +92,19 @@
 .app__navbar-link__sub{
   visibility: hidden;
   position: absolute;
+  overflow: hidden;
   text-align: center;
-  height: 10rem;
+  height: 14rem;
+  max-height: 0;
   width: 100%;
   left: 0;
   top: 2rem;
-  padding: 2rem 0 0;
+  padding: 1.5rem 0 0;
+  transition: all 200ms;
 }
 
 .app__navbar-link__sub li{
+  font-size: 15px;
   padding: 0.3rem;
   cursor: pointer;
 }
@@ -111,6 +115,7 @@
 
 .app__navbar.active .app__navbar-link__sub{
   visibility: visible;
+  max-height: 20rem;
 }
 
 .app__navbar-login{
@@ -135,7 +140,7 @@
     display: none;
   }
 
-  .app__navbar-menu{
+  .app__navbar-toggle{
     display: block;
   }
 }
