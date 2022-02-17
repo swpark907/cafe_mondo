@@ -1,4 +1,24 @@
 .app__menu {
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(246,248,251, 1) 0%, rgba(246,248,251, 1) 70%, rgba(0,0,0,0.5) 70%, transparent 71%, transparent 100%);
+}
+
+.app__menu__title{
+  padding: 1rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.app__menu__title::after{
+  position: absolute;
+  bottom : 0;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  width: 40px;
+  height: 1px;
+  background-color: var(--color-jade);
 }
 
 .app__menu__cards {

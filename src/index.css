@@ -9,16 +9,16 @@
   /* Color */
   --color-white: #fff;
   --color-black: #000;
-  --color-light-grey: #D9C9BA;
+  --color-light-grey: #F6F8FB;
   --color-grey: #a19488;
   --color-red: #A60403;
   --color-orange: rgb(255, 226, 212);
-  --color-pink: #F28485;
+  --color-pink: #f28485;
   --color-dark-pink: #e96668;
   --color-dark-brown: #400001;
   --color-brown: #8C4303;
   --color-beige: #D9965B;
-  --color-jade: #496B72;
+  --color-jade: #496b72;
 
   /* Font family*/
   --font-noto: 'Noto Sans KR', sans-serif;

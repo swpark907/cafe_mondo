@@ -22,6 +22,7 @@ const Menu = () => {
 
   return (
     <div className="app__wrapper app__menu flex__center section_padding">
+      <h2 className="app__menu__title">MENU</h2>
       <ul className="app__menu__cards" onMouseLeave={cardRemoveActive}>
         <li className="app__menu__card" onMouseOver={cardActive}>
           <img src={images.menuCoffee} alt="menu-coffee" />
