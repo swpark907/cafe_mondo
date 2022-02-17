@@ -17,13 +17,10 @@ const About = () => {
     const content = document.querySelector('.app__about');
     const contentTop = content.getBoundingClientRect().top;
     const contentBottom = content.getBoundingClientRect().bottom;
-    console.log({contentTop}, {contentBottom})
-    console.log(window.innerHeight);
-    console.log('스크롤중')
     if(window.innerHeight > contentTop + 500){
       setContentOn(true);
     } else{ setContentOn(false)}
-    if(contentBottom < 500) {
+    if(contentBottom < 350) {
       setContentOn(false);
     }
   }
