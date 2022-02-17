@@ -1,0 +1,82 @@
+.app__footer{
+  color: white;
+  width: 100%;
+  height: 25vh;
+  background-color: var(--color-dark-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.app__footer__info{
+  margin-bottom: auto;
+  margin-right: 3rem;
+}
+.app__footer__info h3{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.app__footer__info p{
+  font-size: 14px;
+  font-family: var(--font-noto);
+  font-weight: 300;
+  margin-top: 0.5rem;
+  color: #bec9df;
+  line-height: 1.5rem;
+}
+
+.app__footer__nav{
+  display: flex;
+}
+
+.app__footer__link{
+  margin: 0 2rem;
+}
+
+.app__footer__nav__main{
+  font-weight: 500;
+}
+
+.app__footer__nav__sub{
+  margin-top: 0.7rem;
+  font-weight: 200;
+}
+
+.app__footer__nav__sub li:hover{
+  cursor: pointer;
+}
+
+.app__footer__social{
+  margin-bottom: auto;
+  margin-left: 50px;
+  
+}
+
+.app__footer__social p{
+  line-height: 35px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.social__links{
+  margin-top: 0.5rem;
+  display: flex;
+}
+.social__links li{
+  font-size: 26px;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: 200ms;
+  padding: 0.5rem;
+}
+
+#social__facebook:hover{
+  color: #4064AC;
+}
+#social__instagram:hover{
+  color: #D52977;
+}
+#social__youtube:hover{
+  color: #F60902;
+}
