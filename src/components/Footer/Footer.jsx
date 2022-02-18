@@ -10,10 +10,10 @@ const Footer = () => {
   return (
     <div className="app__footer">
       <div className="app__footer__info">
-        <h3>CAFFEEMONDO</h3>
+        <h3>CAFFEMONDO</h3>
         <p>
           Copyright 2021. <br />
-          CAFFEEMONDO all rights reserved.
+          CAFFEMONDO all rights reserved.
         </p>
       </div>
       <div>
