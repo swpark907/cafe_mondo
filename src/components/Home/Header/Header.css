@@ -1,6 +1,9 @@
 .app__header{
   padding-top: 5.5rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .app__header img{
@@ -15,6 +18,7 @@
 
 .app__header_info{
   padding: 3rem 4rem 3rem 7rem;
+  width: 700px;
   position: relative;
   display: flex;  
   justify-content: flex-end;
