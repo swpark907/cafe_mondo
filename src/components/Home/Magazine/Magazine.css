@@ -1,0 +1,34 @@
+.app__magazine{
+  flex-direction: column;
+}
+
+.app__magazine__header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.app__magazine__columns{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.app__magazine__column{
+  /* margin: auto; */
+  padding-bottom: 33%;
+  flex: 1;
+  min-width: 200px;
+  max-width: 33%;
+  border: solid 1px black;
+}
+
+@media screen and (max-width: 1150px) {
+}
+@media screen and (max-width: 850px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 500px) {
+}
