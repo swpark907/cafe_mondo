@@ -60,11 +60,12 @@ p{
 @media screen and (max-width: 1150px) {
 }
 @media screen and (max-width: 850px) {
-}
-@media screen and (max-width: 768px) {
   .section_padding {
     padding: 1rem;
   }
+}
+@media screen and (max-width: 768px) {
+  
 }
 
 @media screen and (max-width: 500px) {
