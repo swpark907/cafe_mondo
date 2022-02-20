@@ -1,5 +1,5 @@
 import React from 'react';
-import {Header, About, Menu, Magazine, Gallery, Contact} from '..';
+import {Header, About, Menu, Magazine, Contact} from '..';
 import './Home.css'
 
 const Home = () => {
@@ -9,7 +9,6 @@ const Home = () => {
       <About />
       <Menu />
       <Magazine />
-      <Gallery />
       <Contact />
     </>
   );
