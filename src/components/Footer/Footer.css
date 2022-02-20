@@ -120,9 +120,13 @@
   .app__footer__social p {
     display: none;
   }
+  .social__links li {
+    margin: 0 1rem;
+  }
 }
 @media screen and (max-width: 500px) {
   .app__footer__nav__main {
     font-size: 13px;
   }
+  
 }
