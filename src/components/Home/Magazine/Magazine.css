@@ -20,7 +20,7 @@
   padding-bottom: 33%;
   flex: 1;
   min-width: 200px;
-  max-width: 33%;
+  width: 100%;
   border: solid 1px black;
 }
 
