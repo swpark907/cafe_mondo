@@ -26,6 +26,7 @@ p{
   bottom: 0;
   width: 50px;
   height: 1px;
+  margin-top: 2rem;
   background-color: var(--color-jade);
 }
 
