@@ -21,6 +21,14 @@ p{
   min-height: 100vh;
 }
 
+.after__line::after{
+  content: '';
+  bottom: 0;
+  width: 50px;
+  height: 1px;
+  background-color: var(--color-jade);
+}
+
 .flex__center {
   display: flex;
   justify-content: center;
