@@ -1,0 +1,8 @@
+.page__about{
+  flex-direction: column;
+}
+
+.page__about__info{
+  flex-direction: column;
+  padding: 1rem;
+}
