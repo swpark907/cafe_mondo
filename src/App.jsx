@@ -1,17 +1,16 @@
-import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import { Home, Navbar, Auth, Footer} from './components'
-import { About } from './components/About'
-
-
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import { Home, Navbar, Register, Login, Footer } from "./components";
+import { About } from "./components/About";
 
 function App() {
   return (
     <div>
       <Navbar />
       <Routes>
-        <Route path="/" exact element={<Home />}/>
-        <Route path="/auth" exact element={<Auth />} />
+        <Route path="/" exact element={<Home />} />
+        <Route path="/register" exact element={<Register />} />
+        <Route path="/login" exact element={<Login />} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
