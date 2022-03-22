@@ -5,11 +5,11 @@ const ID_REGEX = "";
 const PW_REGEX = "";
 
 const Register = () => {
-  const idRef = useRef();
+  const userRef = useRef();
 
-  const [id, setId] = useState("");
-  const [validId, setValidId] = useState(false);
-  const [idFocus, setIdFocus] = useState(false);
+  const [user, setUser] = useState("");
+  const [validUser, setValidUser] = useState(false);
+  const [userFocus, setUserFocus] = useState(false);
 
   const [pw, setPw] = useState("");
   const [validPw, setValidPw] = useState(false);
@@ -20,7 +20,7 @@ const Register = () => {
   const [matchFocus, setMatchFocus] = useState(false);
 
   useEffect(() => {
-    idRef.current.focus();
+    userRef.current.focus();
   }, []);
 
   return (
@@ -32,11 +32,14 @@ const Register = () => {
           <div className="form__input">
             <input
               type="text"
-              ref={idRef}
+              ref={userRef}
               required
               className="register__input__id"
               id="registerId"
               placeholder="영소문자 또는 숫자 6~14자로 입력"
+              onChange={(e) => {
+                setUser(e.target.value)
+              }}
             />
             <label htmlFor="registerId"></label>
           </div>
@@ -50,6 +53,9 @@ const Register = () => {
               className="register__input__pw"
               id="registerPw"
               placeholder="영소문자, 숫자 조합으로 8~24자로 입력"
+              onChange={(e) => {
+                setPw(e.target.value)
+              }}
             />
             <label htmlFor="registerPw"></label>
           </div>
@@ -63,15 +69,23 @@ const Register = () => {
               className="register__input__match"
               id="registerMatch"
               placeholder="비밀번호를 다시 한번 입력해주세요"
+              onChange={(e) => {
+                setMatchPw(e.target.value)
+              }}
             />
             <label htmlFor="registerMatch"></label>
           </div>
         </div>
       </form>
       <div className="register__oAuth">
-        <button className="oAuth_btn register__google">구글로 회원가입</button>
-        <button className="oAuth_btn register__naver">카카오로 회원가입</button>
+        <button className="oAuth_btn register__google">
+          <div className="icon">a</div>
+          구글로 회원가입</button>
+        <button className="oAuth_btn register__naver">
+          <div className="icon">a</div>
+          카카오로 회원가입</button>
         <button className="oAuth_btn register__kakao">
+          <div className="icon">a</div>
           네이버 아이디로 회원가입
         </button>
       </div>
