@@ -1,47 +1,78 @@
-.app__register{
+.app__register {
   flex-direction: column;
 }
 
-.form__list{
+.form__list {
   /* display: flex;
   justify-content: space-between;
   align-items: center; */
   min-width: 30rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
-.form__list h3{
+.form__list h3 {
   padding: 0.5rem 0;
   width: 200px;
 }
 
-.form__list label{
-  display: none;
-}
-
-.form__input{
+.form__input {
   width: 100%;
   flex-shrink: 0;
 }
 
-.form__input input{
+.form__input input {
   width: 100%;
   border: solid 1px var(--color-grey);
   border-radius: 4px;
   padding: 0.6rem;
 }
 
-.register__oAuth{
+.form__submitBtn {
+  min-width: 100%;
+  border: solid 1px var(--color-grey);
+  margin: 1rem 0;
+  border-radius: 4px;
+  padding: 0.7rem;
+}
+
+.form__submitBtn:disabled {
+  background-color: rgb(206, 206, 206);
+  color: var(--color-grey);
+  border: solid 2px var(--color-grey);
+}
+
+.form__submitBtn:hover {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+.register__oAuth {
   display: flex;
   flex-direction: column;
   min-width: 30rem;
   padding: 1rem 0;
 }
 
-.oAuth_btn{
+.oAuth_btn {
   min-width: 100%;
   border: solid 1px var(--color-grey);
   margin-bottom: 0.5rem;
   border-radius: 4px;
   padding: 0.7rem;
+}
+
+.oAuth_btn .icon {
+  height: 100%;
+}
+
+.form__list label {
+  color: var(--color-dark-pink);
+  margin-top: 0.5rem;
+}
+
+.valid {
+  display: none;
+}
+.invalid {
+  display: block;
 }
