@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./Register.css";
+import PostcodeModal from "./PostcodeModal";
 
 const USER_REGEX = /^[a-z0-9-_]{6,14}$/;
 const PW_REGEX = /^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -9,16 +10,21 @@ const Register = () => {
 
   const [user, setUser] = useState("");
   const [validUser, setValidUser] = useState(false);
-  const [userFocus, setUserFocus] = useState(false);
-
+  
   const [pw, setPw] = useState("");
   const [validPw, setValidPw] = useState(false);
-  const [pwFocus, setPwFocus] = useState(false);
-
+  
   const [matchPw, setMatchPw] = useState("");
   const [validMatch, setValidMatch] = useState(false);
-  const [matchFocus, setMatchFocus] = useState(false);
+
   const [matchLabelMsg, setMatchLabelMsg] = useState("");
+
+  const [addressInfo, setAddressInfo] = useState({
+    main: null,
+    code: null,
+    sub: null,
+  });
+  const [addressModalOpen, setAddressModalOpen] = useState(false);
 
   useEffect(() => {
     userRef.current.focus();
@@ -113,9 +119,56 @@ const Register = () => {
           </div>
         </div>
 
+        <div className="form__list register__address">
+          <h3>주소</h3>
+          <div className="register__search">
+            <input
+              type="text"
+              className="address__code address__input"
+              readOnly
+              value={addressInfo.code? addressInfo.code : ''}
+              placeholder="우편번호"
+            />
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                setAddressModalOpen(true);
+              }}
+            >
+              우편번호 찾기
+            </button>
+          </div>
+          <input
+            type="text"
+            readOnly
+            className="address__main address__input"
+            value={addressInfo.main? addressInfo.main : ''}
+            placeholder="기본주소"
+          />
+          <input
+            type="text"
+            className="address__sub address__input"
+            placeholder="나머지 주소(선택입력 가능)"
+            onChange={(event) => {
+              setAddressInfo({
+                ...addressInfo,
+                sub: event.target.value,
+              });
+              console.log(addressInfo.sub);
+            }}
+          />
+        </div>
+        {addressModalOpen ? (
+          <PostcodeModal
+            addressInfo={addressInfo}
+            setAddressInfo={setAddressInfo}
+            setAddressModalOpen={setAddressModalOpen}
+          />
+        ) : null}
+
         <button
           className="form__submitBtn"
-          disabled={!validUser || !validPw || !validMatch ? true : false}
+          disabled={!validUser || !validPw || !validMatch || !addressInfo.main || !addressInfo.code ? true : false}
         >
           회원가입
         </button>
