@@ -1,0 +1,18 @@
+.register__oAuth {
+  display: flex;
+  flex-direction: column;
+  min-width: 30rem;
+  padding: 1rem 0;
+}
+
+.oAuth_btn {
+  min-width: 100%;
+  border: solid 1px var(--color-grey);
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  padding: 0.7rem;
+}
+
+.oAuth_btn .icon {
+  height: 100%;
+}

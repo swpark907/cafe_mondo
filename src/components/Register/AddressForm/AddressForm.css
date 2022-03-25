@@ -1,0 +1,30 @@
+.register__address{
+  display: flex;
+  flex-direction: column;
+  min-width: 30rem;
+}
+
+.register__search{
+  display: flex;
+  justify-content: space-between;
+}
+
+.register__search button{
+  padding: 0 0.6rem;
+  background-color: var(--color-light-grey);
+  border: solid 1px var(--color-grey);
+  border-radius: 4px;
+}
+
+.register__search button:hover{
+  color: var(--color-white);
+  background-color: var(--color-grey);
+}
+
+.register__address input{
+  display: inline-block;
+  margin: 0.4rem 0;
+  outline: solid 1px var(--color-grey);
+  border-radius: 4px;
+  padding: 0.6rem;
+}
