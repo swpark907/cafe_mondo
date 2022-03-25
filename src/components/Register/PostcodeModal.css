@@ -1,0 +1,28 @@
+.register__modal__container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.register__modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+}
+
+.register__modal__closeBtn{
+  background-color: var(--color-white);
+  padding: 0.5rem;
+  display: block;
+  margin-right: 0;
+  margin-left: auto;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
