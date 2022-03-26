@@ -1,5 +1,4 @@
 import React from "react";
-import "./PhoneForm.css";
 import { useState, useEffect } from 'react';
 
 const Phone = ({ setPhoneNumber }) => {
