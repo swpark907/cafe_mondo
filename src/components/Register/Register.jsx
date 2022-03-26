@@ -6,6 +6,8 @@ import UserForm from "./UserForm/UserForm";
 import PwForm from "./PwForm/PwForm";
 import MatchPwForm from "./MatchPwForm/MatchPwForm";
 import AddressForm from "./AddressForm/AddressForm";
+import PhoneForm from "./Phone/PhoneForm";
+import EmailForm from "./EmailForm/EmailForm";
 
 const USER_REGEX = /^[a-z0-9-_]{6,14}$/;
 const PW_REGEX = /^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -30,6 +32,14 @@ const Register = () => {
     sub: null,
   });
   const [addressModalOpen, setAddressModalOpen] = useState(false);
+
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+  const [email, setEmail] = useState('');
+
+  useEffect(() => {
+    console.log(email)
+  }, [email])
 
   useEffect(() => {
     userRef.current.focus();
@@ -79,6 +89,10 @@ const Register = () => {
           addressModalOpen={addressModalOpen}
           setAddressModalOpen={setAddressModalOpen}
         />
+
+        <PhoneForm setPhoneNumber={setPhoneNumber} />
+
+        <EmailForm setEmail={setEmail} />
 
         <button
           className="form__submitBtn"
