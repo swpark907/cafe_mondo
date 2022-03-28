@@ -8,6 +8,7 @@ const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
   const [navShow, setNavShow] = useState(true);
   const [isNavToggle, setIsNavToggle] = useState(false);
+  const [navFixed, setNavFixed] = useState(false);
 
   function navToggleHandler() {
     setIsNavToggle(!isNavToggle);
@@ -19,25 +20,27 @@ const Navbar = () => {
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', navShowHadler)
+    window.addEventListener('scroll', navShowHandler)
     return () => {
-      window.removeEventListener('scroll', navShowHadler)
+      window.removeEventListener('scroll', navShowHandler)
     }
   },[navShow])
 
-  function navShowHadler () {
+  function navShowHandler () {
     if(window.scrollY > 300 && navShow){
       setNavShow(false)
+      setNavFixed(true);
       return ;
     }
     if(window.scrollY <= 300 && !navShow){
       setNavShow(true);
+      setNavFixed(false);
       return;
     }
   }
 
   return (
-    <div className={"app__navbar" + (navActive === false ? "" : " active") + (navShow ? "" : " on")}>
+    <div className={"app__navbar" + (navActive === false ? "" : " active") + (navShow ? "" : " on") + (navFixed ? " fixed" : "")}>
       <div className="app__navbar-container">
         <div className="app__navbar-logo">
           <Link to="/">CAFFEMONDO</Link>
