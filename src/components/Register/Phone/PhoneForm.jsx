@@ -18,7 +18,7 @@ const Phone = ({ setPhoneNumber }) => {
   return (
     <div className="form__list">
       <h3>연락처</h3>
-      <div className="form__input form__phone">
+      <div className="form__input form__flex">
         <input
           className="phone__input"
           id="phone1"
