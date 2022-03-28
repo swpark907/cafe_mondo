@@ -15,9 +15,6 @@
 
 .form__input {
   width: 100%;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
 }
 
 .form__input input {
