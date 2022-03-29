@@ -36,6 +36,7 @@ const Register = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
 
   const [email, setEmail] = useState('');
+  const [validEmail, setValidEmail] = useState(false)
 
   useEffect(() => {
     console.log(email)
@@ -66,7 +67,7 @@ const Register = () => {
   }, [pw, matchPw]);
 
   return (
-    <div className="app__register flex__center app__wrapper">
+    <div className="app__register flex__center app__wrapper section_padding">
       <h2>회원가입</h2>
       <form className="register__form">
         <UserForm
@@ -92,7 +93,7 @@ const Register = () => {
 
         <PhoneForm setPhoneNumber={setPhoneNumber} />
 
-        <EmailForm setEmail={setEmail} />
+        <EmailForm setEmail={setEmail} setValidEmail={setValidEmail} validEmail={validEmail}/>
 
         <button
           className="form__submitBtn"
@@ -101,7 +102,8 @@ const Register = () => {
             !validPw ||
             !validMatch ||
             !addressInfo.main ||
-            !addressInfo.code
+            !addressInfo.code ||
+            !validEmail
               ? true
               : false
           }
