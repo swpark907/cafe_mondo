@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Register.css";
 import PostcodeModal from "./PostcodeModal/PostcodeModal";
 import SocialLogin from "./SocialLogin/SocialLogin";
@@ -13,7 +13,7 @@ const USER_REGEX = /^[a-z0-9-_]{6,14}$/;
 const PW_REGEX = /^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 const Register = () => {
-  const userRef = useRef();
+  const [success, setSuccess] = useState(false);
 
   const [user, setUser] = useState("");
   const [validUser, setValidUser] = useState(false);
@@ -33,18 +33,28 @@ const Register = () => {
   });
   const [addressModalOpen, setAddressModalOpen] = useState(false);
 
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState("");
 
-  const [email, setEmail] = useState('');
-  const [validEmail, setValidEmail] = useState(false)
+  const [email, setEmail] = useState("");
+  const [validEmail, setValidEmail] = useState(false);
+
+  const [userData, setUserData] = useState({});
+
+  const handleRegister = () => {
+    // 이 함수 대신 서버 전송 함수를 넣는다
+    setUserData({
+      user,
+      pw,
+      addressInfo,
+      phoneNumber,
+      email,
+    });
+    setSuccess(true);
+  };
 
   useEffect(() => {
-    console.log(email)
-  }, [email])
-
-  useEffect(() => {
-    userRef.current.focus();
-  }, []);
+    console.log(userData);
+  }, [userData]);
 
   useEffect(() => {
     const result = USER_REGEX.test(user);
@@ -68,50 +78,62 @@ const Register = () => {
 
   return (
     <div className="app__register flex__center app__wrapper section_padding">
-      <h2>회원가입</h2>
-      <form className="register__form">
-        <UserForm
-          userRef={userRef}
-          user={user}
-          validUser={validUser}
-          setUser={setUser}
-        />
-        <PwForm setPw={setPw} pw={pw} validPw={validPw} />
-        <MatchPwForm
-          setMatchPw={setMatchPw}
-          matchPw={matchPw}
-          validMatch={validMatch}
-          matchLabelMsg={matchLabelMsg}
-        />
+      {success ? (
+        <>
+          <h1>회원가입을 축하합니다!</h1>
+          <button>로그인하기</button>
+        </>
+      ) : (
+        <>
+          <h2>회원가입</h2>
+          <form className="register__form">
+            <UserForm user={user} validUser={validUser} setUser={setUser} />
+            <PwForm setPw={setPw} pw={pw} validPw={validPw} />
+            <MatchPwForm
+              setMatchPw={setMatchPw}
+              matchPw={matchPw}
+              validMatch={validMatch}
+              matchLabelMsg={matchLabelMsg}
+            />
 
-        <AddressForm
-          addressInfo={addressInfo}
-          setAddressInfo={setAddressInfo}
-          addressModalOpen={addressModalOpen}
-          setAddressModalOpen={setAddressModalOpen}
-        />
+            <AddressForm
+              addressInfo={addressInfo}
+              setAddressInfo={setAddressInfo}
+              addressModalOpen={addressModalOpen}
+              setAddressModalOpen={setAddressModalOpen}
+            />
 
-        <PhoneForm setPhoneNumber={setPhoneNumber} />
+            <PhoneForm setPhoneNumber={setPhoneNumber} />
 
-        <EmailForm setEmail={setEmail} setValidEmail={setValidEmail} validEmail={validEmail}/>
+            <EmailForm
+              setEmail={setEmail}
+              setValidEmail={setValidEmail}
+              validEmail={validEmail}
+            />
 
-        <button
-          className="form__submitBtn"
-          disabled={
-            !validUser ||
-            !validPw ||
-            !validMatch ||
-            !addressInfo.main ||
-            !addressInfo.code ||
-            !validEmail
-              ? true
-              : false
-          }
-        >
-          회원가입
-        </button>
-      </form>
-      <SocialLogin></SocialLogin>
+            <button
+              className="form__submitBtn"
+              disabled={
+                !validUser ||
+                !validPw ||
+                !validMatch ||
+                !addressInfo.main ||
+                !addressInfo.code ||
+                !validEmail
+                  ? true
+                  : false
+              }
+              onClick={() => {
+                handleRegister();
+                // 서버 전송 함수
+              }}
+            >
+              회원가입
+            </button>
+          </form>
+          <SocialLogin></SocialLogin>
+        </>
+      )}
     </div>
   );
 };
