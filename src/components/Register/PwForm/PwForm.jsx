@@ -11,6 +11,7 @@ const PwForm = ({setPw, pw, validPw}) => {
           className="register__input__pw"
           id="registerPw"
           placeholder="영소문자, 숫자 조합으로 8~24자로 입력"
+          autoComplete="off"
           onChange={(e) => {
             setPw(e.target.value);
           }}

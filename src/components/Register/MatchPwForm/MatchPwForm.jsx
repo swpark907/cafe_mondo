@@ -11,6 +11,7 @@ const MatchPwForm = ({setMatchPw, matchPw, validMatch, matchLabelMsg}) => {
           className="register__input__match"
           id="registerMatch"
           placeholder="비밀번호를 다시 한번 입력해주세요"
+          autoComplete="off"
           onChange={(e) => {
             setMatchPw(e.target.value);
           }}
