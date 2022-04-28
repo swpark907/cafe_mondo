@@ -5,7 +5,7 @@ import { About } from "./components/About";
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" exact element={<Home />} />
@@ -14,7 +14,7 @@ function App() {
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 
