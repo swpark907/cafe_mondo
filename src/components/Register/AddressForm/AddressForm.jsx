@@ -3,6 +3,7 @@ import PostcodeModal from "../PostcodeModal/PostcodeModal";
 import './AddressForm.css'
 
 const AddressForm = ({addressInfo, setAddressInfo, addressModalOpen, setAddressModalOpen}) => {
+  console.log(addressInfo);
   return (
     <div className="form__list register__address">
       <h3>주소</h3>

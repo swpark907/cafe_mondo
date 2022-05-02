@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Register.css";
-import PostcodeModal from "./PostcodeModal/PostcodeModal";
-import SocialLogin from "./SocialLogin/SocialLogin";
-import UserForm from "./UserForm/UserForm";
-import PwForm from "./PwForm/PwForm";
-import MatchPwForm from "./MatchPwForm/MatchPwForm";
-import AddressForm from "./AddressForm/AddressForm";
-import PhoneForm from "./Phone/PhoneForm";
-import EmailForm from "./EmailForm/EmailForm";
+import PostcodeModal from "../../components/Register/PostcodeModal/PostcodeModal";
+import {AddressForm, EmailForm, PhoneForm,MatchPwForm,PwForm,UserForm,SocialLogin} from '../../components/index'
 
 const USER_REGEX = /^[a-z0-9-_]{6,14}$/;
 const PW_REGEX = /^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
