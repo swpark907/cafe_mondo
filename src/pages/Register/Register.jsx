@@ -3,8 +3,7 @@ import "./Register.css";
 import PostcodeModal from "../../components/Register/PostcodeModal/PostcodeModal";
 import {AddressForm, EmailForm, PhoneForm,MatchPwForm,PwForm,UserForm,SocialLogin} from '../../components/index'
 
-const USER_REGEX = /^[a-z0-9-_]{6,14}$/;
-const PW_REGEX = /^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+import { USER_REGEX, PW_REGEX } from "../../constants/regex";
 
 const Register = () => {
   const [success, setSuccess] = useState(false);
