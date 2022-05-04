@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-
-const EMAIL_REGEX = /^[a-z0-9_+.-]+@([a-z0-9-]+\.)+[a-z0-9]{2,4}$/
+import { EMAIL_REGEX } from "../../../constants/index";
 
 const EmailForm = ({ setEmail, setValidEmail, validEmail }) => {
   const [directInput, setDirectInput] = useState(false);
