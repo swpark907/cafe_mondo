@@ -1,0 +1,32 @@
+.app__login{
+  flex-direction: column;
+}
+
+.login__form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 460px;
+}
+
+.login__form .id-pw-wrap{
+  padding: 20px 28px;
+}
+
+.login__form .id-pw-wrap input{
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border: solid 1px var(--color-grey);
+}
+
+.login__form .id-pw-wrap button{
+  border-radius: 8px;
+  width: 100%;
+  padding: 0.5rem;
+  border: solid 1px var(--color-pink);
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
