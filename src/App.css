@@ -17,6 +17,19 @@ p{
   font-size: 16px;
 }
 
+button{
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  transition: all 150ms ease-in;
+}
+
+button:hover{
+  background-color: var(--color-dark-pink);
+}
+
 .app__wrapper {
   min-height: 100vh;
 }
