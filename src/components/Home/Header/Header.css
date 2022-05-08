@@ -59,19 +59,6 @@
   color: var(--color-grey);
 }
 
-.app__header-button{
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  background-color: var(--color-pink);
-  color: var(--color-white);
-  transition: all 150ms ease-in;
-}
-
-.app__header-button:hover{
-  background-color: var(--color-dark-pink);
-}
-
 @media screen and (max-width: 1150px){
 
 }
