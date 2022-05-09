@@ -1,6 +1,6 @@
 import React from "react";
 import "./Menu.css";
-import { menuInfo } from "../../../constants";
+import { menuInfo } from "../../../../constants";
 import Card from "./Card";
 
 const Menu = () => {

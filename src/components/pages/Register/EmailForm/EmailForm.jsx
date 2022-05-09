@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { EMAIL_REGEX } from "../../../constants/index";
+import { EMAIL_REGEX } from "../../../../constants/index";
 
 const EmailForm = ({ setEmail, setValidEmail, validEmail }) => {
   const [directInput, setDirectInput] = useState(false);

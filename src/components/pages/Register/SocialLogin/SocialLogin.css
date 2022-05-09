@@ -1,0 +1,6 @@
+.register__oAuth {
+  display: flex;
+  flex-direction: column;
+  min-width: 30rem;
+  padding: 1rem 0;
+}
