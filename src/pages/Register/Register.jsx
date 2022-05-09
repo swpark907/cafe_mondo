@@ -124,7 +124,7 @@ const Register = () => {
               회원가입
             </button>
           </form>
-          <SocialLogin></SocialLogin>
+          <SocialLogin />
         </>
       )}
     </div>
