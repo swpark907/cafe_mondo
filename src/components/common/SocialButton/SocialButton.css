@@ -1,0 +1,12 @@
+.oAuth_btn {
+  width: 100%;
+  max-width: 460px;
+  border: solid 1px var(--color-grey);
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  padding: 0.7rem;
+}
+
+.oAuth_btn .icon {
+  height: 100%;
+}
