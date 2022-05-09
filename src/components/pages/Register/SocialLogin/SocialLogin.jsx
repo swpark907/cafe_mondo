@@ -3,11 +3,14 @@ import "./SocialLogin.css";
 import SocialButton from "../../../common/SocialButton/SocialButton";
 
 const SocialLogin = () => {
+
+  const socialList = ['google', 'kakao', 'naver'];
+
   return (
     <div className="register__oAuth">
-      <SocialButton platform="google" mode="register" />
-      <SocialButton platform="kakao" mode="register" />
-      <SocialButton platform="naver" mode="register" />
+      {socialList.map(social => 
+        <SocialButton platform={social} mode="register" />
+      )}
     </div>
   );
 };
