@@ -6,6 +6,15 @@ import SocialButton from "../../components/common/SocialButton/SocialButton";
 const Login = () => {
   const [userId, setUserId] = useState("");
   const [userPw, setUserPw] = useState("");
+  const [isLogin, setIsLogin] = useState(false);
+
+  const userCheck = (userId, userPw) => {
+    // 서버로 보내서 아이디, 비밀번호 확인하는 작업
+  };
+
+  const submitHandler = () => {
+    userCheck(userId, userPw) ? setIsLogin(true) : setIsLogin(false);
+  };
 
   const socialList = ["google", "kakao", "naver"];
 
@@ -14,16 +23,36 @@ const Login = () => {
       <h2>로그인</h2>
       <form className="login__form">
         <div className="id-pw-wrap">
-          <input type="text" placeholder="아이디" />
-          <input type="text" placeholder="비밀번호" />
-          <button>로그인</button>
+          <input
+            type="text"
+            placeholder="아이디"
+            onChange={(e) => {
+              setUserId(e.target.value);
+            }}
+          />
+          <input
+            type="text"
+            placeholder="비밀번호"
+            onChange={(e) => {
+              setUserPw(e.target.value);
+            }}
+          />
+          <button
+            onClick={() => {
+              submitHandler();
+            }}
+          >
+            로그인
+          </button>
         </div>
       </form>
-      <span>아직 아이디가 없어신가요? <Link to="/register">회원가입</Link></span> 
+      <span>
+        아직 아이디가 없어신가요? <Link to="/register">회원가입</Link>
+      </span>
 
-      {socialList.map(social => 
-      <SocialButton platform={social} mode="login" />
-      )}
+      {socialList.map((social) => (
+        <SocialButton platform={social} mode="login" />
+      ))}
     </div>
   );
 };
