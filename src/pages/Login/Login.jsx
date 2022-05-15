@@ -1,20 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
-import SocialButton from "../../components/common/SocialButton/SocialButton";
+import { SocialButton, Button } from "../../components/index";
 
-const Login = () => {
+const Login = ({ isLogin, setIsLogin }) => {
   const [userId, setUserId] = useState("");
   const [userPw, setUserPw] = useState("");
-  const [isLogin, setIsLogin] = useState(false);
+  const [validationMsg, setValidationMsg] = useState("로그인 유효성 검사");
 
   const userCheck = (userId, userPw) => {
     // 서버로 보내서 아이디, 비밀번호 확인하는 작업
+    return true;
   };
 
-  const submitHandler = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
     userCheck(userId, userPw) ? setIsLogin(true) : setIsLogin(false);
   };
+
+  useEffect(() => {
+    console.log(isLogin);
+  }, [isLogin]);
 
   const socialList = ["google", "kakao", "naver"];
 
@@ -26,24 +32,21 @@ const Login = () => {
           <input
             type="text"
             placeholder="아이디"
+            id="userId"
             onChange={(e) => {
               setUserId(e.target.value);
             }}
           />
           <input
-            type="text"
+            type="password"
             placeholder="비밀번호"
+            id="userPw"
             onChange={(e) => {
               setUserPw(e.target.value);
             }}
           />
-          <button
-            onClick={() => {
-              submitHandler();
-            }}
-          >
-            로그인
-          </button>
+          <p className="validation-message">{validationMsg}</p>
+          <Button onClick={submitHandler}>로그인</Button>
         </div>
       </form>
       <span>
