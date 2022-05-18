@@ -27,7 +27,17 @@
   width: 100%;
   padding: 0.5rem;
   border: solid 1px var(--color-pink);
-  background-color: var(--color-pink);
-  color: var(--color-white);
 }
 
+.login__form .validation-message{
+  display: none;
+  color: var(--color-red);
+}
+
+.login__form .validation-message.hide{
+  display: none;
+}
+
+.login__form .validation-message.invalid{
+  display: block;
+}
