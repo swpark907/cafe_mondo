@@ -19,6 +19,12 @@
   /* Font family*/
   --font-noto: "Noto Sans KR", sans-serif;
   --font-Roboto: "Roboto", sans-serif;
+
+  /* Font Size */
+  --font-h1: 60px;
+  --font-h2: 40px;
+  --font-h3: 20px;
+  --font-md: 16px;
 }
 
 * {
