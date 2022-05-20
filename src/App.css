@@ -9,15 +9,15 @@ h2 {
   font-weight: 500;
 }
 
-h3{
+h3 {
   font-size: 20px;
 }
 
-p{
+p {
   font-size: 16px;
 }
 
-button{
+button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 10px;
@@ -25,13 +25,21 @@ button{
   color: var(--color-white);
   transition: all 150ms ease-in;
 }
+button.primary {
+  background-color: var(--color-dark-pink);
+  font-size: 20px;
+}
 
-button:hover{
+button.secondary {
+  background-color: var(--color-orange);
+}
+
+button:hover {
   background-color: var(--color-dark-pink);
 }
 
-button:active{
-  color: var(--color-dark-pink)
+button:active {
+  color: var(--color-dark-pink);
 }
 
 input {
@@ -47,14 +55,15 @@ select {
   color: inherit;
   margin: 0 1rem;
   padding: 0;
-  border:none;
+  border: none;
 }
 
-ul li{
+ul li {
   list-style: none;
 }
 
-a:link, a:visited{
+a:link,
+a:visited {
   color: var(--color-black);
   text-decoration: none;
 }
@@ -63,8 +72,8 @@ a:link, a:visited{
   min-height: 100vh;
 }
 
-.after__line::after{
-  content: '';
+.after__line::after {
+  content: "";
   bottom: 0;
   width: 50px;
   height: 1px;
@@ -108,7 +117,7 @@ a:link, a:visited{
   text-align: end;
 }
 
-.form__flex{
+.form__flex {
   display: flex;
   align-items: center;
 }
@@ -121,18 +130,17 @@ a:link, a:visited{
   }
 }
 @media screen and (max-width: 768px) {
-  
 }
 
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 30px;
   }
-  h2{
+  h2 {
     font-size: 30px;
   }
 
-  p{
+  p {
     font-size: 13px;
   }
 }
