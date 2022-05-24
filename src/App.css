@@ -18,12 +18,16 @@ p {
 }
 
 button {
+  font-size: var(--font-md);
+  font-weight: bold;
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5em 1em;
   border-radius: 10px;
   background-color: var(--color-pink);
   color: var(--color-white);
   transition: all 150ms ease-in;
+  outline: none;
+  border: none;
 }
 button.primary {
   background-color: var(--color-dark-pink);
