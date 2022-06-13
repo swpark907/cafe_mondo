@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "../../../common/Button/Button";
+import './Carousel.css';
 
 const Carousel = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -21,7 +22,8 @@ const Carousel = () => {
   };
 
   useEffect(() => {
-    carouselRef.current.style.transform = `translateX(-${currentSlideIndex})`;
+    console.log(currentSlideIndex);
+    carouselRef.current.style.transform = `translateX(-${currentSlideIndex}00%)`;
   }, [currentSlideIndex]);
 
   return (
