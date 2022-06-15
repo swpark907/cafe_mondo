@@ -1,0 +1,20 @@
+.about__carousel{
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel__container{
+  display: flex;
+  width: 100%;
+  transition: all 250ms;
+  
+}
+
+.carousel__container .carousel{
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
