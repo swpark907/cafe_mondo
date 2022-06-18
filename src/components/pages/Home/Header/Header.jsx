@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import { images } from "../../../../constants";
 import { Link } from "react-router-dom";
+import Carousel from "./Carousel";
 
 const Header = () => {
   return (
@@ -15,6 +16,7 @@ const Header = () => {
           <Link to="/about">빠져보기</Link>
         </button>
       </div>
+      <Carousel></Carousel>
     </div>
   );
 };
