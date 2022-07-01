@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Button from "../../../common/Button/Button";
-import './Carousel.css';
+import "./Carousel.css";
 
 const Carousel = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -12,12 +12,16 @@ const Carousel = () => {
   const slideToNext = () => {
     if (currentSlideIndex + 1 < TOTAL_SLIDE) {
       setCurrentSlideIndex(currentSlideIndex + 1);
+    } else {
+      setCurrentSlideIndex(0);
     }
   };
 
   const slideToPrev = () => {
     if (currentSlideIndex > 0) {
       setCurrentSlideIndex(currentSlideIndex - 1);
+    } else {
+      setCurrentSlideIndex(TOTAL_SLIDE - 1);
     }
   };
 
